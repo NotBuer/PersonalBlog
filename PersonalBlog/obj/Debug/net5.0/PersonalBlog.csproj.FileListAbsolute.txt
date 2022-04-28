@@ -12,8 +12,6 @@ C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\obj\Debug\net5.0\
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\obj\Debug\net5.0\PersonalBlog.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\appsettings.json
-C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlogTest\obj\PersonalBlogTest.csproj.nuget.dgspec.json
-C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlogTest\obj\project.assets.json
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlog.exe
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlog.deps.json
 C:\Users\rodri\Documents\_Generation\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlog.runtimeconfig.json
