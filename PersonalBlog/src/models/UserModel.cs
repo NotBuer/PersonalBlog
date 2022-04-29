@@ -9,6 +9,8 @@ namespace PersonalBlog.src.models
     [Table("tb_users")]
     public class UserModel
     {
+        public UserModel() { }
+
         public UserModel(int id, string name, string email, string password, string picture)
         {
             Id = id;
@@ -22,16 +24,13 @@ namespace PersonalBlog.src.models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [Required, StringLength(50)]
         public string Name { get; set; }
 
-        [Required]
-        [StringLength(40)]
+        [Required, StringLength(40)]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Required, StringLength(20)]
         public string Password { get; set; }
 
         public string Picture { get; set; }

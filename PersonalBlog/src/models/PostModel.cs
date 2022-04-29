@@ -12,13 +12,13 @@ namespace PersonalBlog.src.models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required, StringLength(30)]
         public string Title { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Required, StringLength(100)]
         public string Description { get; set; }
+
+        public string Picture { get; set; }
 
         [ForeignKey("FK_User")]
         public UserModel Creator { get; set; }
