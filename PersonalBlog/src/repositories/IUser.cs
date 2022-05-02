@@ -13,7 +13,7 @@ namespace PersonalBlog.src.repositories
     {
         void CreateUser(NewUserDTO userDTO);
         void UpdateUser(UpdateUserDTO userDTO);
-        void DeleteUser(DeleteUserDTO userDTO);
+        void DeleteUser(int id);
         UserModel GetUserById(int id);
         UserModel GetUserByEmail(string email);
         UserModel GetUserByName(string name);
