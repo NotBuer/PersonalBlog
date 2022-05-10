@@ -1,6 +1,6 @@
-﻿using PersonalBlog.src.DTOS;
+﻿using PersonalBlog.src.data;
+using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
-using PersonalBlog.src.data;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,7 +25,7 @@ namespace PersonalBlog.src.repositories.implementations
         #region METHODS
         public void NewTheme(NewThemeDTO themeDTO)
         {
-            _context.Themes.Add(new ThemeModel
+            _context.Theme.Add(new ThemeModel
             {
                 Description = themeDTO.Description,
             });
@@ -34,7 +34,7 @@ namespace PersonalBlog.src.repositories.implementations
 
         public void UpdateTheme(UpdateThemeDTO themeDTO)
         {
-            ThemeModel model = TakeThemeById(themeDTO.Id);
+            ThemeModel model = GetThemeById(themeDTO.Id);
             model.Description = themeDTO.Description;
             _context.Update(model);
             _context.SaveChanges();
@@ -42,24 +42,25 @@ namespace PersonalBlog.src.repositories.implementations
 
         public void DeleteTheme(int id)
         {
-            _context.Themes.Remove(TakeThemeById(id));
+            _context.Theme.Remove(GetThemeById(id));
             _context.SaveChanges();
         }
 
-        public List<ThemeModel> TakeAllThemes()
+        public List<ThemeModel> TakeAllThemes() 
         {
-            return _context.Themes.ToList();
+            return _context.Theme.ToList();
         }
 
-        public List<ThemeModel> TakeThemeByDescription(string description)
+        public List<ThemeModel> GetThemesByDescription(string description)
         {
-            return _context.Themes.Where(t => t.Description == description).ToList();
+            return _context.Theme.Where(t => t.Description == description).ToList();
         }
 
-        public ThemeModel TakeThemeById(int id)
+        public ThemeModel GetThemeById(int id)
         {
-            return _context.Themes.FirstOrDefault(t => t.Id == id);
+            return _context.Theme.FirstOrDefault(t => t.Id == id);
         }
         #endregion
+
     }
 }

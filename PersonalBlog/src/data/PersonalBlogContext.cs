@@ -6,14 +6,14 @@ namespace PersonalBlog.src.data
 
     public class PersonalBlogContext : DbContext
     {
+        
+        public DbSet<UsersModel> User { get; set; }
+        public DbSet<PostModel> Post { get; set; }
+        public DbSet<ThemeModel> Theme { get; set;}
 
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<ThemeModel> Themes { get; set; }
-        public DbSet<PostModel> Posts { get; set; }
+        public PersonalBlogContext(DbContextOptions<PersonalBlogContext> opt) : base(opt)
+        {        
 
-        public PersonalBlogContext(DbContextOptions<PersonalBlogContext> options) : base(options)
-        {
-            
         }
 
     }

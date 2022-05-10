@@ -1,21 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PersonalBlog.src.DTOS
+namespace PersonalBlog.src.dtos
 {
 
     /// <summary>
-    /// DTO for create a new post
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for create a new post </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class NewPostDTO
     {
-        public NewPostDTO(string title, string description, string picture, string creatorEmail, string themeDescription)
+        public NewPostDTO(string title, string description, string photo, string creatorEmail, string themeDescription)
         {
             Title = title;
             Description = description;
-            Picture = picture;
+            Photo = photo;
             CreatorEmail = creatorEmail;
             ThemeDescription = themeDescription;
         }
@@ -26,7 +26,7 @@ namespace PersonalBlog.src.DTOS
         [Required, StringLength(100)]
         public string Description { get; set; }
 
-        public string Picture { get; set; }
+        public string Photo { get; set; }
 
         [Required, StringLength(30)]
         public string CreatorEmail { get; set; }
@@ -37,18 +37,18 @@ namespace PersonalBlog.src.DTOS
     }
 
     /// <summary>
-    /// DTO for update a post
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for update a new post </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class UpdatePostDTO
     {
-        public UpdatePostDTO(string title, string description, string picture, string themeDescription)
+        public UpdatePostDTO(string title, string description, string photo, string themeDescription)
         {
             Title = title;
             Description = description;
-            Picture = picture;
+            Photo = photo;
             ThemeDescription = themeDescription;
         }
 
@@ -61,7 +61,7 @@ namespace PersonalBlog.src.DTOS
         [Required, StringLength(100)]
         public string Description { get; set; }
 
-        public string Picture { get; set; }
+        public string Photo { get; set; }
 
         [Required]
         public string ThemeDescription { get; set; }

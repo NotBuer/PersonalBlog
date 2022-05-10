@@ -1,22 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PersonalBlog.src.utils;
+using System.ComponentModel.DataAnnotations;
 
-namespace PersonalBlog.src.DTOS
+namespace PersonalBlog.src.dtos
 {
 
     /// <summary>
-    /// DTO for create a new user data.
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for create a new user </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class NewUserDTO
     {
-        public NewUserDTO(string name, string email, string password, string picture)
+        public NewUserDTO(string name, string email, string password, string photo,
+            UserType userType)
         {
             Name = name;
             Email = email;
             Password = password;
-            Picture = picture;
+            Photo = photo;
+            UserType = userType;
         }
 
         [Required, StringLength(50)]
@@ -28,22 +31,25 @@ namespace PersonalBlog.src.DTOS
         [Required, StringLength(20)]
         public string Password { get; set; }
 
-        public string Picture { get; set; }
+        public string Photo { get; set; }
+
+        [Required]
+        public UserType UserType { get; set; }
     }
 
     /// <summary>
-    /// DTO for update the user data.
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for update a new user </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class UpdateUserDTO
     {
-        public UpdateUserDTO(string name, string password, string picture)
+        public UpdateUserDTO(string name, string password, string photo)
         {
             Name = name;
             Password = password;
-            Picture = picture;
+            Photo = photo;
         }
 
         [Required]
@@ -55,18 +61,18 @@ namespace PersonalBlog.src.DTOS
         [Required, StringLength(20)]
         public string Password { get; set; }
 
-        public string Picture { get; set; }
+        public string Photo { get; set; }
     }
 
     /// <summary>
-    /// DTO for delete the user data.
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for delete a new user </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class DeleteUserDTO
     {
 
     }
-    
+
 }

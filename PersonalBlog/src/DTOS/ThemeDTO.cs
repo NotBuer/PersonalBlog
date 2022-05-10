@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PersonalBlog.src.DTOS
+namespace PersonalBlog.src.dtos
 {
 
     /// <summary>
-    /// DTO for create a new theme
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for create a new theme </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class NewThemeDTO
     {
@@ -21,10 +21,10 @@ namespace PersonalBlog.src.DTOS
     }
 
     /// <summary>
-    /// DTO for update a theme.
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para> DTO for update the theme </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class UpdateThemeDTO
     {
@@ -32,6 +32,9 @@ namespace PersonalBlog.src.DTOS
         {
             Description = description;
         }
+
+        [Required]
+        public int Id { get; set; }
 
         [Required, StringLength(150)]
         public string Description { get; set; }

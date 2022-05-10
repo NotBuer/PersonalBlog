@@ -1,23 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using PersonalBlog.src.utils;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace PersonalBlog.src.models
 {
-    
     [Table("tb_users")]
-    public class UserModel
+    public class UsersModel
     {
-        public UserModel() { }
+        public UsersModel () { }
 
-        public UserModel(int id, string name, string email, string password, string picture)
+        public UsersModel(string name, string email, string password, string photo, UserType userType)
         {
-            Id = id;
             Name = name;
             Email = email;
             Password = password;
-            Picture = picture;
+            Photo = photo;
+            UserType = userType;
         }
 
         [Key]
@@ -27,17 +27,19 @@ namespace PersonalBlog.src.models
         [Required, StringLength(50)]
         public string Name { get; set; }
 
-        [Required, StringLength(40)]
+        [Required, StringLength(30)]
         public string Email { get; set; }
 
-        [Required, StringLength(20)]
+        [Required, StringLength(30)]
         public string Password { get; set; }
+       
+        public string Photo { get; set; }
 
-        public string Picture { get; set; }
+        [Required]
+        public UserType UserType { get; set; }
 
         [JsonIgnore]
-        public List<PostModel> UserPosts { get; set; }
-        
+        public List<PostModel> MyPosts { get; set; }
+
     }
-    
 }

@@ -1,13 +1,14 @@
-﻿using PersonalBlog.src.DTOS;
+﻿using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
 using System.Collections.Generic;
-using PersonalBlog.src.data;
 using System.Linq;
+using PersonalBlog.src.data;
 
 namespace PersonalBlog.src.repositories.implementations
 {
     public class PostRepository : IPost
     {
+
         #region ATTRIBUTE
         private readonly PersonalBlogContext _context;
         #endregion
@@ -24,11 +25,11 @@ namespace PersonalBlog.src.repositories.implementations
         #region METHODS
         public void NewPost(NewPostDTO post)
         {
-            _context.Posts.Add(new PostModel
+            _context.Post.Add(new PostModel
             {
                 Title = post.Title,
                 Description = post.Description,
-                Picture = post.Picture,
+                Photo = post.Photo,
             });
             _context.SaveChanges();
         }
@@ -38,25 +39,25 @@ namespace PersonalBlog.src.repositories.implementations
             PostModel model = GetPostById(post.Id);
             model.Title = post.Title;
             model.Description = post.Description;
-            model.Picture = post.Picture;
+            model.Photo = post.Photo;
             _context.Update(model);
             _context.SaveChanges();
         }
 
         public void DeletePost(int id)
         {
-            _context.Posts.Remove(GetPostById(id));
+            _context.Post.Remove(GetPostById(id));
             _context.SaveChanges();
         }
 
         public List<PostModel> GetAllPosts()
         {
-            return _context.Posts.ToList();
+            return _context.Post.ToList();
         }
 
         public PostModel GetPostById(int id)
         {
-            return _context.Posts.FirstOrDefault(p => p.Id == id);
+            return _context.Post.FirstOrDefault(p => p.Id == id);
         }
 
         public List<PostModel> GetPostBySearch(string title, string description, string creator)

@@ -1,6 +1,7 @@
 ﻿using PersonalBlog.src.data;
-using PersonalBlog.src.DTOS;
+using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PersonalBlog.src.repositories.implementations
@@ -24,45 +25,51 @@ namespace PersonalBlog.src.repositories.implementations
         #region METHODS
         public void CreateUser(NewUserDTO userDTO)
         {
-            _context.Users.Add(new UserModel
+            _context.User.Add(new UsersModel
             {
-                Email = userDTO.Email,
                 Name = userDTO.Name,
+                Email = userDTO.Email,
                 Password = userDTO.Password,
-                Picture = userDTO.Picture
+                Photo = userDTO.Photo,
+                UserType = userDTO.UserType,
             });
             _context.SaveChanges();
         }
 
         public void UpdateUser(UpdateUserDTO userDTO)
         {
-            UserModel user = GetUserById(userDTO.Id);
+            UsersModel user = GetUserById(userDTO.Id);
             user.Name = userDTO.Name;
             user.Password = userDTO.Password;
-            user.Picture = userDTO.Picture;
-            _context.Users.Update(user);
+            user.Photo = userDTO.Photo;
+            _context.User.Update(user);
             _context.SaveChanges();
         }
 
         public void DeleteUser(int id)
         {
-            _context.Users.Remove(GetUserById(id));
+            _context.User.Remove(GetUserById(id));
             _context.SaveChanges();
         }
 
-        public UserModel GetUserByEmail(string email)
+        public UsersModel GetUserByEmail(string email)
         {
-            return _context.Users.FirstOrDefault(u => u.Email == email);
+            return _context.User.FirstOrDefault(u => u.Email == email);
         }
 
-        public UserModel GetUserById(int id)
+        public UsersModel GetUserById(int id)
         {
-            return _context.Users.FirstOrDefault(u => u.Id == id);
+            return _context.User.FirstOrDefault(u => u.Id == id);
         }
 
-        public UserModel GetUserByName(string name)
+        public UsersModel GetUserByName(string name)
         {
-            return _context.Users.FirstOrDefault(u => u.Name == name);
+            return _context.User.FirstOrDefault(u => u.Name == name);
+        }
+
+        public List<UsersModel> GetUsersByName(string name)
+        {
+            throw new System.NotImplementedException();
         }
         #endregion
 

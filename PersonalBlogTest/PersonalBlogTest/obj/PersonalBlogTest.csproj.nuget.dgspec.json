@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj": {}
+    "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj": {
+    "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj",
+        "projectUniqueName": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj",
         "projectName": "PersonalBlogTest",
-        "projectPath": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj",
-        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\obj\\",
+        "projectPath": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\PersonalBlogTest.csproj",
+        "packagesPath": "C:\\Users\\Nickole\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlogTest\\PersonalBlogTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nickole\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://teamcity.monogame.net/guestAuth/app/nuget/feed/_Root/default/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj": {
-                "projectPath": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj"
+              "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj": {
+                "projectPath": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj"
               }
             }
           }
@@ -89,17 +88,17 @@
         }
       }
     },
-    "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj": {
+    "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj",
+        "projectUniqueName": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj",
         "projectName": "PersonalBlog",
-        "projectPath": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj",
-        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri\\Documents\\_Generation\\PersonalBlog\\PersonalBlog\\obj\\",
+        "projectPath": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\PersonalBlog.csproj",
+        "packagesPath": "C:\\Users\\Nickole\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nickole\\Desktop\\GENERATION .NET\\10. Coisas do amor da minha vida\\PersonalBlog\\PersonalBlog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nickole\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,7 +106,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://teamcity.monogame.net/guestAuth/app/nuget/feed/_Root/default/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,6 +124,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.13, )"

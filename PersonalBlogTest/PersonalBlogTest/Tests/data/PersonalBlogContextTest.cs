@@ -24,10 +24,10 @@ namespace PersonalBlogTest.Tests.data
         [TestMethod]
         public void InsertNewUserInDBReturnsUser()
         {
-            UserModel user = new UserModel(0, "Rodrigo", "rodrigotest@email.com", "passwordtest123", "pictureLink");
-            _context.Users.Add(user);
+            UsersModel user = new UsersModel("Rodrigo", "rodrigotest@email.com", "passwordtest123", "pictureLink", PersonalBlog.src.utils.UserType.ADMIN);
+            _context.User.Add(user);
             _context.SaveChanges();
-            Assert.IsNotNull(_context.Users.FirstOrDefault(u => u.Email == "rodrigotest@email.com"));
+            Assert.IsNotNull(_context.User.FirstOrDefault(u => u.Email == "rodrigotest@email.com"));
         }
 
     }

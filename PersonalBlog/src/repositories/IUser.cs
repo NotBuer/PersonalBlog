@@ -1,21 +1,24 @@
-﻿using PersonalBlog.src.DTOS;
+﻿using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
+using System.Collections.Generic;
 
 namespace PersonalBlog.src.repositories
 {
+
     /// <summary>
-    /// Represents User CRUD actions
-    /// <para> Author: Rodrigo Franca </para>
-    /// <para> Version: 1.0 </para>
-    /// <para> Date: 29/04/2022 </para>
+    /// <para>  </para>
+    /// <para>Criado por: Nickole Bueno</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 29/04/2022</para>
     /// </summary>
     public interface IUser
     {
         void CreateUser(NewUserDTO userDTO);
         void UpdateUser(UpdateUserDTO userDTO);
         void DeleteUser(int id);
-        UserModel GetUserById(int id);
-        UserModel GetUserByEmail(string email);
-        UserModel GetUserByName(string name);
+        UsersModel GetUserById(int id);
+        UsersModel GetUserByEmail(string email);
+        UsersModel GetUserByName(string name);
+        List<UsersModel> GetUsersByName(string name);
     }
 }

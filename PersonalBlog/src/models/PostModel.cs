@@ -3,11 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PersonalBlog.src.models
 {
-
     [Table("tb_posts")]
     public class PostModel
     {
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -18,13 +16,12 @@ namespace PersonalBlog.src.models
         [Required, StringLength(100)]
         public string Description { get; set; }
 
-        public string Picture { get; set; }
+        public string Photo { get; set; }
 
         [ForeignKey("FK_User")]
-        public UserModel Creator { get; set; }
+        public UsersModel Creator { get; set; }
 
         [ForeignKey("FK_Theme")]
         public ThemeModel Theme { get; set; }
-
     }
 }
