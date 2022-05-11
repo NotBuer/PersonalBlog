@@ -52,7 +52,7 @@ namespace PersonalBlog.src.repositories.implementations
             _context.SaveChanges();
         }
 
-        public UsersModel GetUserByEmail(string email)
+        public UsersModel GetUserByEmail(string email) 
         {
             return _context.User.FirstOrDefault(u => u.Email == email);
         }
