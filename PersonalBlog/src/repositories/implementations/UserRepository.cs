@@ -57,7 +57,7 @@ namespace PersonalBlog.src.repositories.implementations
             return _context.User.FirstOrDefault(u => u.Email == email);
         }
 
-        public UsersModel GetUserById(int id)
+        public UsersModel GetUserById(int id) 
         {
             return _context.User.FirstOrDefault(u => u.Id == id);
         }
