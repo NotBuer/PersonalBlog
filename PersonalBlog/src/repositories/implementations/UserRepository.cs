@@ -46,7 +46,7 @@ namespace PersonalBlog.src.repositories.implementations
             _context.SaveChanges();
         }
 
-        public void DeleteUser(int id)
+        public void DeleteUser(int id) 
         {
             _context.User.Remove(GetUserById(id));
             _context.SaveChanges();
