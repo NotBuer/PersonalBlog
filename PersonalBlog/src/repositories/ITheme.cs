@@ -1,17 +1,19 @@
 ﻿using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PersonalBlog.src.repositories
 {
     public interface ITheme
     {
 
-        void NewTheme(NewThemeDTO themeDTO);
-        void UpdateTheme(UpdateThemeDTO themeDTO);
-        void DeleteTheme(int id);
-        ThemeModel GetThemeById(int id);
-        List<ThemeModel> GetThemesByDescription(string description);
+        Task NewThemeAsync(NewThemeDTO themeDTO);
+        Task UpdateThemeAsync(UpdateThemeDTO themeDTO);
+        Task DeleteThemeAsync(int id);
+        Task<ThemeModel> GetThemeByIdAsync(int id);
+        Task<List<ThemeModel>> GetThemesByDescriptionAsync(string description);
+        Task<List<ThemeModel>> GetAllThemesAsync();
 
     }
 }

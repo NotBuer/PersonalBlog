@@ -1,13 +1,14 @@
 ﻿using PersonalBlog.src.dtos;
 using PersonalBlog.src.models;
+using System.Threading.Tasks;
 
 namespace PersonalBlog.src.services
 {
     public interface IAuthentication
     {
         string EncodePassword(string password);
-        void CreateUserNoDuplicates(NewUserDTO userDTO);
+        Task CreateUserNoDuplicatesAsync(NewUserDTO userDTO);
         string GenerateToken(UsersModel user);
-        AuthorizationDTO GetAuthorization(AuthenticateDTO authenticateDTO);
+        Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticateDTO authenticateDTO);
     }
 }

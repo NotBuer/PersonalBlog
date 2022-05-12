@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PersonalBlog.src.models;
+﻿using PersonalBlog.src.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace PersonalBlog.src.data
 {

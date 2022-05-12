@@ -1,34 +1,44 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PersonalBlog.src.data;
+﻿using PersonalBlog.src.data;
 using PersonalBlog.src.models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PersonalBlogTest.Tests.data
+namespace PersonalBlogTest.Tests.Data
 {
     [TestClass]
     public class PersonalBlogContextTest
     {
+
         private PersonalBlogContext _context;
 
         [TestInitialize]
         public void Initialization()
         {
             DbContextOptions<PersonalBlogContext> options = new DbContextOptionsBuilder<PersonalBlogContext>()
-                .UseInMemoryDatabase(databaseName: "db_personalblog")
-                .Options;
+                    .UseInMemoryDatabase(databaseName: "db_blogpessoal")
+                    .Options;
 
             _context = new PersonalBlogContext(options);
+
         }
 
         [TestMethod]
-        public void InsertNewUserInDBReturnsUser()
+        public void InsertNewUser()
         {
-            UsersModel user = new UsersModel("Rodrigo", "rodrigotest@email.com", "passwordtest123", "pictureLink", PersonalBlog.src.utils.UserType.ADMIN);
+            UsersModel user = new UsersModel();
+            user.Id = 0;
+            user.Name = "Nickole Bueno";
+            user.Email = "nickole@email.com";
+            user.Password = "passwordtest123";
+            user.Photo = "photolink...";
             _context.User.Add(user);
             _context.SaveChanges();
-            Assert.IsNotNull(_context.User.FirstOrDefault(u => u.Email == "rodrigotest@email.com"));
+            Assert.IsNotNull(_context.User.FirstOrDefault(u => u.Email == "nickole@email.com"));
         }
-
     }
 }

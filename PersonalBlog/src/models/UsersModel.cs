@@ -9,17 +9,6 @@ namespace PersonalBlog.src.models
     [Table("tb_users")]
     public class UsersModel
     {
-        public UsersModel () { }
-
-        public UsersModel(string name, string email, string password, string photo, UserType userType)
-        {
-            Name = name;
-            Email = email;
-            Password = password;
-            Photo = photo;
-            UserType = userType;
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
