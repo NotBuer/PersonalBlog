@@ -114,3 +114,10 @@ C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\Person
 C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\obj\Debug\net5.0\PersonalBlog.csproj.CopyComplete
 C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\obj\Debug\net5.0\PersonalBlog.genruntimeconfig.cache
 C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\obj\Debug\net5.0\ref\PersonalBlog.dll
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\bin\Debug\net5.0\PersonalBlog.xml
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\obj\Debug\net5.0\PersonalBlog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nickole\Desktop\GENERATION .NET\10. Coisas do amor da minha vida\PersonalBlog\PersonalBlog\obj\Debug\net5.0\PersonalBlog.xml
