@@ -183,3 +183,5 @@ C:/Users/Nickole/Desktop/GENERATION .NET/10. Coisas do amor da minha vida/Person
 /home/notbuer/Generation/PersonalBlog/PersonalBlog/obj/Debug/net5.0/PersonalBlog.pdb
 /home/notbuer/Generation/PersonalBlog/PersonalBlog/obj/Debug/net5.0/PersonalBlog.genruntimeconfig.cache
 /home/notbuer/Generation/PersonalBlog/PersonalBlog/obj/Debug/net5.0/ref/PersonalBlog.dll
+/home/notbuer/Generation/PersonalBlog/PersonalBlog/bin/Debug/net5.0/Npgsql.dll
+/home/notbuer/Generation/PersonalBlog/PersonalBlog/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

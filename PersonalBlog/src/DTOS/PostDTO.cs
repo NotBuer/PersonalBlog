@@ -5,8 +5,7 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for create a new post </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
+    /// <para>Version: 1.0</para>
     /// <para>Data: 29/04/2022</para>
     /// </summary>
     public class NewPostDTO
@@ -38,9 +37,8 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for update a new post </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Version: 1.0</para>
+    /// <para>Date: 29/04/2022</para>
     /// </summary>
     public class UpdatePostDTO
     {

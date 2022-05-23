@@ -5,9 +5,8 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for create a new theme </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Version: 1.0</para>
+    /// <para>Date: 29/04/2022</para>
     /// </summary>
     public class NewThemeDTO
     {
@@ -22,9 +21,8 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for update the theme </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Version: 1.0</para>
+    /// <para>Date: 29/04/2022</para>
     /// </summary>
     public class UpdateThemeDTO
     {

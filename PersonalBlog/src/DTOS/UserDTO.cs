@@ -6,9 +6,8 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for create a new user </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Version: 1.0</para>
+    /// <para>Date: 29/04/2022</para>
     /// </summary>
     public class NewUserDTO
     {
@@ -39,9 +38,8 @@ namespace PersonalBlog.src.dtos
 
     /// <summary>
     /// <para> DTO for update a new user </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Version: 1.0</para>
+    /// <para>Date: 29/04/2022</para>
     /// </summary>
     public class UpdateUserDTO
     {
@@ -62,17 +60,6 @@ namespace PersonalBlog.src.dtos
         public string Password { get; set; }
 
         public string Photo { get; set; }
-    }
-
-    /// <summary>
-    /// <para> DTO for delete a new user </para>
-    /// <para>Criado por: Nickole Bueno</para>
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
-    /// </summary>
-    public class DeleteUserDTO
-    {
-
     }
 
 }

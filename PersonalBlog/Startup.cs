@@ -45,11 +45,13 @@ namespace PersonalBlog
             // Database configuration
             if (Configuration["Environment:Start"] == "PROD"){
                 services.AddEntityFrameworkNpgsql()
-                    .AddDbContext<BlogPessoalContexto>(
+                    .AddDbContext<PersonalBlogContext>(
                     opt =>
                     opt.UseNpgsql(Configuration["ConnectionStringsProd:DefaultConnection"]));
             } else {
-                services.AddDbContext<PersonalBlogContext>(opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+                services.AddDbContext<PersonalBlogContext>(
+                    opt =>
+                    opt.UseSqlServer(Configuration["ConnectionStringsDev:DefaultConnection"]));
             }
             
             // Repositories configuration
@@ -137,12 +139,12 @@ namespace PersonalBlog
                 app.UseSwagger();
                 app.UseSwaggerUI(c => {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonalBlog v1");
-                    //c.RoutePrefix = string.Empty;
+                    c.RoutePrefix = string.Empty;
                 });
             }
 
             // Production environment
-            contexto.Database.EnsureCreated();
+            context.Database.EnsureCreated();
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
             app.UseSwaggerUI(c => {
@@ -150,9 +152,8 @@ namespace PersonalBlog
                 c.RoutePrefix = string.Empty;
             });
 
+            // Routes
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseCors(c => c
                 .AllowAnyOrigin()
@@ -160,9 +161,11 @@ namespace PersonalBlog
                 .AllowAnyHeader()
             );
 
+            // Authentication
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // Endpoints
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
