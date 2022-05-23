@@ -41,12 +41,23 @@ namespace PersonalBlog
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            services.AddDbContext<PersonalBlogContext>(opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
 
+            // Database configuration
+            if (Configuration["Environment:Start"] == "PROD"){
+                services.AddEntityFrameworkNpgsql()
+                    .AddDbContext<BlogPessoalContexto>(
+                    opt =>
+                    opt.UseNpgsql(Configuration["ConnectionStringsProd:DefaultConnection"]));
+            } else {
+                services.AddDbContext<PersonalBlogContext>(opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+            }
+            
+            // Repositories configuration
             services.AddScoped<IUser, UserRepository>();
             services.AddScoped<ITheme, ThemeRepository>();
             services.AddScoped<IPost, PostRepository>();
 
+            // Controllers condfiguration
             services.AddCors();
             services.AddControllers();
 
@@ -117,6 +128,7 @@ namespace PersonalBlog
         // This method gets called by the runtime.Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PersonalBlogContext context)
         {
+            // Development environment
             if (env.IsDevelopment())
             {
                 context.Database.EnsureCreated();
@@ -128,6 +140,15 @@ namespace PersonalBlog
                     //c.RoutePrefix = string.Empty;
                 });
             }
+
+            // Production environment
+            contexto.Database.EnsureCreated();
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonalBlog v1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 
