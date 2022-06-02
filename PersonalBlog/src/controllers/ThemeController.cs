@@ -130,7 +130,7 @@ namespace PersonalBlog.src.controllers
         /// <returns>ActionResult</returns>
         /// <response code="204">Theme deleted</response>
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [HttpDelete("deletar/{idTheme}")]
+        [HttpDelete("delete/{idTheme}")]
         [Authorize(Roles = "ADMIN")]
         public async Task<ActionResult> DeleteThemeAsync([FromRoute] int idTheme)
         {
