@@ -35,7 +35,7 @@ namespace PersonalBlog.src.controllers
         /// <remarks>
         /// Exemplo de requisição:
         ///
-        ///     POST /api/Autenticacao
+        ///     POST /api/Authentication
         ///     {
         ///        "email": "rodrigo@domain.com",
         ///        "senha": "134652"
@@ -48,7 +48,7 @@ namespace PersonalBlog.src.controllers
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AuthenticateDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        [HttpPost("authenticate")]
+        [HttpPost]
         [AllowAnonymous]
         public IActionResult Authenticate([FromBody] AuthenticateDTO authenticationDTO)
         {
