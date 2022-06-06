@@ -61,7 +61,7 @@ namespace PersonalBlog.src.controllers
         /// <response code="404">User does not exist</response>
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsersModel))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [HttpGet("name/{nameUser}")]
+        [HttpGet]
         [Authorize(Roles = "NORMAL,ADMIN")]
         public async Task<ActionResult> GetUsersByNameAsync([FromQuery] string name)
         {
@@ -101,7 +101,7 @@ namespace PersonalBlog.src.controllers
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(UsersModel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        [HttpPost("create")]
+        [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult> NewUserAsync([FromBody] NewUserDTO userDTO)
         {
