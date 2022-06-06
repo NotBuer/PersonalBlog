@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PersonalBlog.src.dtos
 {
-    public class AuthenticateDTO
+    public class AuthenticationDTO
     {
-        public AuthenticateDTO(string email, string password)
+        public AuthenticationDTO(string email, string password)
         {
             Email = email;
             Password = password;

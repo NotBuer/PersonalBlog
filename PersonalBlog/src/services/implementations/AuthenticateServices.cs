@@ -66,7 +66,7 @@ namespace PersonalBlog.src.services.implementations
             return manipulationToken.WriteToken(token);
         }
 
-        public async Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticateDTO authenticateDTO)
+        public async Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticationDTO authenticateDTO)
         {
             var user = await _repository.GetUserByEmailAsync(authenticateDTO.Email);
             if (user == null) throw new Exception("User not found!");

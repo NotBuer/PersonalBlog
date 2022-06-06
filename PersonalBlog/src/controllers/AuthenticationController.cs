@@ -31,10 +31,10 @@ namespace PersonalBlog.src.controllers
         /// <summary>
         /// Get Authorization
         /// </summary>
-        /// <param name="authenticationDTO"> AuthenticateDTO</param>
+        /// <param name="authentication"> AuthenticateDTO</param>
         /// <returns>ActionResult</returns>
         /// <remarks>
-        /// Exemplo de requisição:
+        /// Requisition example:
         ///
         ///     POST /api/Authentication
         ///     {
@@ -46,17 +46,17 @@ namespace PersonalBlog.src.controllers
         /// <response code="201">Return the created user</response>
         /// <response code="400">Requisition error</response>
         /// <response code="401">Invalid e-mail or password</response>
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AuthorizationDTO))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AuthorizationDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult> AuthenticateAsync([FromBody] AuthenticateDTO authenticationDTO)
+        public async Task<ActionResult> AuthenticateAsync([FromBody] AuthenticationDTO authentication)
         {
             if (!ModelState.IsValid) return BadRequest();
             try
             {
-                AuthorizationDTO authorization = await _services.GetAuthorizationAsync(authenticationDTO);
+                AuthorizationDTO authorization = await _services.GetAuthorizationAsync(authentication);
                 return Ok(authorization);
             }
             catch (Exception ex)

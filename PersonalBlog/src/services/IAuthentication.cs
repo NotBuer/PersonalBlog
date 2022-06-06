@@ -9,6 +9,6 @@ namespace PersonalBlog.src.services
         string EncodePassword(string password);
         Task CreateUserNoDuplicatesAsync(NewUserDTO userDTO);
         string GenerateToken(UsersModel user);
-        Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticateDTO authenticateDTO);
+        Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticationDTO authenticateDTO);
     }
 }
