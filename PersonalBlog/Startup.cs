@@ -139,7 +139,7 @@ namespace PersonalBlog
                 app.UseSwagger();
                 app.UseSwaggerUI(c => {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonalBlog v1");
-                    c.RoutePrefix = string.Empty;
+                    c.RoutePrefix = String.Empty;
                 });
             }
 
@@ -149,7 +149,7 @@ namespace PersonalBlog
             app.UseSwagger();
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonalBlog v1");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = String.Empty;
             });
 
             // Routes

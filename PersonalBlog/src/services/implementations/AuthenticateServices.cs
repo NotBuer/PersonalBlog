@@ -66,12 +66,16 @@ namespace PersonalBlog.src.services.implementations
             return manipulationToken.WriteToken(token);
         }
 
-        public async Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticationDTO authenticateDTO)
+        public async Task<AuthorizationDTO> GetAuthorizationAsync(AuthenticationDTO authentication)
         {
-            var user = await _repository.GetUserByEmailAsync(authenticateDTO.Email);
+            var user = await _repository.GetUserByEmailAsync(authentication.Email);
+
             if (user == null) throw new Exception("User not found!");
-            if (user.Password != EncodePassword(authenticateDTO.Password)) throw new Exception("Wrong password!");
+
+            if (user.Password != EncodePassword(authentication.Password)) throw new Exception("Wrong password!");
+
             return new AuthorizationDTO(user.Id, user.Email, user.UserType, GenerateToken(user));
+
         }
         #endregion
 
