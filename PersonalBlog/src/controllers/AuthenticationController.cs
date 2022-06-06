@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 
 namespace PersonalBlog.src.controllers
 {
@@ -45,17 +46,17 @@ namespace PersonalBlog.src.controllers
         /// <response code="201">Return the created user</response>
         /// <response code="400">Requisition error</response>
         /// <response code="401">Invalid e-mail or password</response>
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AuthenticateDTO))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AuthorizationDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Authenticate([FromBody] AuthenticateDTO authenticationDTO)
+        public async Task<ActionResult> AuthenticateAsync([FromBody] AuthenticateDTO authenticationDTO)
         {
             if (!ModelState.IsValid) return BadRequest();
             try
             {
-                var authorization = _services.GetAuthorizationAsync(authenticationDTO);
+                AuthorizationDTO authorization = await _services.GetAuthorizationAsync(authenticationDTO);
                 return Ok(authorization);
             }
             catch (Exception ex)

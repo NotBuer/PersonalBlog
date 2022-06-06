@@ -4,6 +4,26 @@
         <name>PersonalBlog</name>
     </assembly>
     <members>
+        <member name="M:PersonalBlog.src.controllers.AuthenticationController.AuthenticateAsync(PersonalBlog.src.dtos.AuthenticateDTO)">
+             <summary>
+             Get Authorization
+             </summary>
+             <param name="authenticationDTO"> AuthenticateDTO</param>
+             <returns>ActionResult</returns>
+             <remarks>
+             Exemplo de requisição:
+            
+                 POST /api/Authentication
+                 {
+                    "email": "rodrigo@domain.com",
+                    "senha": "134652"
+                 }
+            
+             </remarks>
+             <response code="201">Return the created user</response>
+             <response code="400">Requisition error</response>
+             <response code="401">Invalid e-mail or password</response>
+        </member>
         <member name="M:PersonalBlog.src.controllers.PostController.GetPostByIdAsync(System.Int32)">
             <summary>
             Get posts by as async.
